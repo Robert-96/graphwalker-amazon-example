@@ -59,7 +59,6 @@ public class ShoppingCartTest extends ExecutionContext implements ShoppingCart {
         // The number of books should be equal both in the model, and in this program
         Assert.assertEquals(expected_num_of_books_by_graphwalker, numberOfAddedBooksByProgram);
 
-
         if (expected_num_of_books_by_graphwalker == 0) {
             $(".sc-your-amazon-cart-is-empty").shouldHave(text("Your Amazon Cart is empty"));
             return;
@@ -76,7 +75,6 @@ public class ShoppingCartTest extends ExecutionContext implements ShoppingCart {
     public void v_Amazon() {
         $(".nav-search-field input[type='text']").shouldBe(visible);
     }
-
 
     public void e_SearchBook() {
         $(".nav-search-field input[type='text']").shouldBe(visible);
