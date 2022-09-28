@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  model-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: altwalker/setup-graphwalker@main
+        with:
+          graphwalker-version: '4.3.2'
+      - name: Check models for issues
+        run: |
+          gw check -m src/main/resources/org/graphwalker/ShoppingCart.json "random(edge_coverage(100))"
