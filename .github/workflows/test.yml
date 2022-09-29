@@ -11,7 +11,7 @@ jobs:
           graphwalker-version: '4.3.2'
       - name: Check models for issues
         run: |
-          gw check -m src/main/resources/org/graphwalker/ShoppingCart.json "random(edge_coverage(100))"
+          gw check -m src/main/resources/org/graphwalker/ShoppingCart.json "quick_random(edge_coverage(100))"
       - name: Generating a test sequence
         run: |
-          gw offline -m src/main/resources/org/graphwalker/ShoppingCart.json "random(edge_coverage(100))"
+          gw offline -m src/main/resources/org/graphwalker/ShoppingCart.json "quick_random(edge_coverage(100))"
