@@ -6,7 +6,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: altwalker/setup-graphwalker@main
+      - uses: altwalker/setup-graphwalker@v1
         with:
           graphwalker-version: '4.3.2'
       - name: Check models for issues
